@@ -295,17 +295,16 @@ def player_with_longest_name
   long_name
 end 
           
-          
-#           if high_points == ""
-#             high_points = stats[:points]
-#             player_with_points = player 
-#           elsif stats[:points] > high_points
-#             high_points = stats[:points]
-#             player_with_points = player 
-#           end 
-#         end 
-#       end 
-#     end 
-#   end 
-#   player_with_points
-# end 
+def long_name_steals_a_ton?
+  #returns true if result of player_with_longest_name == most_steals 
+  most_steals = ""
+  player_with_most_steals = ""
+  game_hash.each do |place, team|
+    team.each do |attributes, data|
+      if attributes == :players
+        data.each do |player, stats|
+          if most_steals == ""
+            most_steals = stats[:steals]
+            player_with_most_steals = player 
+            
+end 
