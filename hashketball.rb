@@ -284,19 +284,29 @@ def player_with_longest_name
       if attributes == :players 
         data.each do |player, stats|
           binding.pry
-          
-          
-          
-          if high_points == ""
-            high_points = stats[:points]
-            player_with_points = player 
-          elsif stats[:points] > high_points
-            high_points = stats[:points]
-            player_with_points = player 
+          if long_name == ""
+            long_name = player 
+          elsif player.length > long_name.length
+            long_name = player 
           end 
         end 
       end 
     end 
   end 
-  player_with_points
+  long_name
 end 
+          
+          
+#           if high_points == ""
+#             high_points = stats[:points]
+#             player_with_points = player 
+#           elsif stats[:points] > high_points
+#             high_points = stats[:points]
+#             player_with_points = player 
+#           end 
+#         end 
+#       end 
+#     end 
+#   end 
+#   player_with_points
+# end 
