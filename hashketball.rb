@@ -262,7 +262,6 @@ def winning_team
       end 
     end 
   end 
-  binding.pry
 end
 
 # def player_with_the_longest_name
