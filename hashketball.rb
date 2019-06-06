@@ -237,9 +237,8 @@ def winning_team
   home_team = ""
   game_hash.each do |place, team|
     if place == :home
+      home_team = team[:team_name]
       team.each do |attributes, data|
-        binding.pry
-        home_team = attributes[:team_name]
         if attributes == :players
           data.each do |player, stats|
             if home_points == ""
