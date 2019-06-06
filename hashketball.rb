@@ -262,6 +262,11 @@ def winning_team
       end 
     end 
   end 
+  if away_points > home_points
+    return away_points
+  else
+    return home_points
+  end 
 end
 
 def player_with_longest_name
