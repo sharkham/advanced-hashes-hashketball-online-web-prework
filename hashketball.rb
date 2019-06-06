@@ -277,13 +277,13 @@ end
 #   end 
 # end 
 
-def player_with_the_longest_name
+def player_with_longest_name
   long_name = ""
   game_hash.each do |place, team|
     team.each do |attributes, data|
       if attributes == :players 
-        binding.pry
         data.each do |player, stats|
+          binding.pry
           if high_points == ""
             high_points = stats[:points]
             player_with_points = player 
