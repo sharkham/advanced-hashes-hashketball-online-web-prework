@@ -306,5 +306,12 @@ def long_name_steals_a_ton?
           if most_steals == ""
             most_steals = stats[:steals]
             player_with_most_steals = player 
-            
+          elsif stats[:steals] > most_steals
+            most_steals = stats[:steals]
+            player_with_most_steals = player 
+          end 
+        end 
+      end 
+    end 
+    player_with_longest_name == player_with_most_steals
 end 
