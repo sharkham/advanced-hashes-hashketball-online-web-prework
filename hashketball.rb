@@ -284,6 +284,9 @@ def player_with_longest_name
       if attributes == :players 
         data.each do |player, stats|
           binding.pry
+          
+          
+          
           if high_points == ""
             high_points = stats[:points]
             player_with_points = player 
